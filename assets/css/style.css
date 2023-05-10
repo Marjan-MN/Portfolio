@@ -1,0 +1,123 @@
+:root {
+    --dark: #452DD9;
+    --textColor:#1c1c1c;
+    --light: #DCDAFF;
+  }
+
+* {
+    margin: 15px 10px;
+    padding: 5px 10px;
+    
+  }
+  
+  html {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    min-height: 100vh;
+    font-size: medium;
+    font-family:sans-serif;
+    margin: 0;
+    flex-direction: column;
+  }
+
+  header{
+    background-color: var(--light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+  }
+
+  h1 {
+    font-size: 300%;
+    color: var(--dark);
+}
+
+h2 {
+    font-size: 200%;
+    color: var(--textColor);
+    display: inline;
+}
+
+li{
+    margin: 5px;
+    padding: 15px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 100%;
+    padding: 0px ;
+    
+  }
+  
+  nav a {
+    font-size: 150%;
+    font-weight: bold;
+    text-decoration: none;
+    float: right;
+    color: var(--textColor);
+    margin: 0px;
+    padding: 0px;
+    line-height: normal;
+  }
+  nav a:hover {
+    color: var(--dark);
+    text-decoration: underline 2px;
+    line-height: 0.5px;
+  }
+
+  .mypic{
+    float: right;
+    display: inline;
+    width: 400px;
+    height: auto;
+    margin-right: 150px;
+  }
+
+  .works {
+    padding-top: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /*have a var(--dark) hover on the boxes*/
+
+  .box:hover{
+     
+}
+
+  .box {
+
+        size: 50px;
+        padding: 10px;
+        flex: 0 0 300px;
+        margin: 20px;
+
+    }
+
+.workBox{
+    width: 500px;
+    height: 300px;
+}
+
+.icon{
+    width: 70px;
+    height: auto;
+    float: right;
+}
+
+footer{
+    background-color: var(--light);
+    align-items: center;
+
+}
