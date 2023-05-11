@@ -1,7 +1,9 @@
 :root {
-    --dark: #452DD9;
+    --dark: hsl(248, 69%, 51%);
     --textColor:#1c1c1c;
     --light: #DCDAFF;
+    --overlay:hsl(248, 69%, 51%, 0.7)
+
   }
 
 * {
@@ -37,8 +39,16 @@
     flex-wrap: wrap;
   }
 
+  #logo{
+    width: 100px;
+    height: auto;
+  }
+  #logo:hover{
+    transform: scale(1.1);
+  }
+
   h1 {
-    font-size: 250%;
+    font-size: 350%;
     color: var(--textColor);
 }
 
@@ -47,6 +57,13 @@ h2 {
     color: var(--textColor);
     display: inline;
 }
+
+h3{
+  font-size: 150%;
+  color: var(--textColor);
+  margin-top: 100px;
+}
+
 
 li{
     margin: 5px;
@@ -88,12 +105,22 @@ nav ul {
     height: auto;
     margin-right: 50px;
   }
+  #About-Me{
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+  #aboutMe-property{
+    font-size: 20px;
+    color: var(--textColor);
+    line-height: 50px;
+  }
 
   #Programming{
     border: solid var(--textColor);
     width: 500px;
     height: 400px;  
   }
+
   #comingSoon{
     width: 500px;
     height: 400px;
@@ -102,25 +129,49 @@ nav ul {
     background-size: cover;
   }
 
+  #bamboo{
+    width: 500px;
+    height: 400px;
+    background-image: url("../images/Bamboo.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  #coffe-app{
+    width: 500px;
+    height: 400px;
+    background-image: url("../images/CoffeeHouse.jpeg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  #photography{
+    width: 500px;
+    height: 400px;
+    background-image: url("../images/photography.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
   .projectContainer{
     position: relative;
   }
+
   .projectOverlay{
     top:0;
     left: 0;
     bottom: 0;
     right: 0;
     position: absolute;
-    background-color: var(--dark);
+    background-color: var(--overlay);
     opacity: 0;
     color: white;
-    font-size: 50px;
+    font-size: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .project-title{
+  /* .project-title{
     top:0;
     left: 0;
     bottom: 0;
@@ -131,8 +182,8 @@ nav ul {
     font-size: 50px;
     display: flex;
     justify-content: center;
-    align-items: center;
-  }
+    align-items: center; */
+  /* } */
   /* .projectContainer .project-title:hover{
     /* transform: scale(1.1); */
     /* opacity: 1;
@@ -144,7 +195,7 @@ nav ul {
 
   .projectContainer .projectOverlay:hover{
     /* transform: scale(1.1); */
-    opacity: 0.8;
+    opacity: 1;
 
   }
   
@@ -160,7 +211,7 @@ nav ul {
   }
 
   /*have a var(--dark) hover on the boxes*/
-
+/* 
   .box {
 
         size: 50px;
@@ -168,11 +219,7 @@ nav ul {
         flex: 0 0 300px;
         margin: 20px;
 
-    }
-.workBox:hover{
-  background-color: var(--dark);
-  
-}
+    } */
 
 .workBox{
     width: 500px;
@@ -188,7 +235,7 @@ nav ul {
 }
 
 a .icon:hover{
-
+  transform: scale(1.1);
 }
 
 footer{
@@ -219,18 +266,20 @@ a[data-descr]:hover {
   z-index: 1;
 }
 
-/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
-@media screen and (min-width: 768px) {
-  /* on tablets, set columns to only be 50% of the width and not grow */
-  .main-header {
-  
+/* Cards are split into two columns at 992px or smaller */
+@media screen and (max-width: 992px) {
+  .card {
+    width: 50%;
+  }
+  /* Change the header color */
+  header {
+    background: #772014;
   }
 }
 
-/* media query for larger screens */
-@media screen and (min-width: 992px) {
-  header {
-    width: 100%;
-  }
-
+/* Cards are stacked on top of each other at 768px or smaller */
+@media screen and (max-width: 768px) {
+footer{
+  
+}
 }
