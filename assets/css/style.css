@@ -11,33 +11,35 @@
   }
   
   html {
-    display: flex;
-    flex-wrap: wrap;
     height: 100%;
   }
   
   body {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: flex-start;
     min-height: 100vh;
     font-size: medium;
-    font-family:sans-serif;
-    margin: 0;
-    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0%;
   }
-
-  header{
-    background-color: var(--light);
+  
+  .main-header{
+    margin: 0%;
+    padding: 0%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 10px 0px 10px;
+    background: var(--light);
+    width: 100%;
+  }
+
+  main{
+    display: flex;
+    flex-wrap: wrap;
   }
 
   h1 {
-    font-size: 300%;
-    color: var(--dark);
+    font-size: 250%;
+    color: var(--textColor);
 }
 
 h2 {
@@ -51,17 +53,21 @@ li{
     padding: 15px;
 }
 
+
+nav{
+  display: flex;
+}
 nav ul {
     display: flex;
     justify-content: flex-end;
+    flex-wrap:wrap;
     font-size: 100%;
     padding: 0px ;
     
   }
   
   nav a {
-    font-size: 150%;
-    font-weight: bold;
+    font-size: 100%;
     text-decoration: none;
     float: right;
     color: var(--textColor);
@@ -80,21 +86,80 @@ nav ul {
     display: inline;
     width: 400px;
     height: auto;
-    margin-right: 150px;
+    margin-right: 50px;
   }
 
+  #Programming{
+    border: solid var(--textColor);
+    width: 500px;
+    height: 400px;  
+  }
+  #comingSoon{
+    width: 500px;
+    height: 400px;
+    background-image: url("../images/ComingSoon.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .projectContainer{
+    position: relative;
+  }
+  .projectOverlay{
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-color: var(--dark);
+    opacity: 0;
+    color: white;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-title{
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity:0;
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* .projectContainer .project-title:hover{
+    /* transform: scale(1.1); */
+    /* opacity: 1;
+
+  } 
+  */
+
+
+
+  .projectContainer .projectOverlay:hover{
+    /* transform: scale(1.1); */
+    opacity: 0.8;
+
+  }
+  
+
   .works {
-    padding-top: 300px;
+    padding-top: 100px;
+  }
+
+  .work-flex{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    flex: 2;
   }
 
   /*have a var(--dark) hover on the boxes*/
-
-  .box:hover{
-     
-}
 
   .box {
 
@@ -104,20 +169,68 @@ nav ul {
         margin: 20px;
 
     }
+.workBox:hover{
+  background-color: var(--dark);
+  
+}
 
 .workBox{
     width: 500px;
     height: 300px;
+    border:  solid var(--textColor);
+    
 }
 
 .icon{
-    width: 70px;
+    width: 50px;
     height: auto;
     float: right;
+}
+
+a .icon:hover{
+
 }
 
 footer{
     background-color: var(--light);
     align-items: center;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+a[data-descr]:hover {
+  content: attr(data-descr);
+  position: absolute;
+  left: 0px;
+  bottom: 24px;
+  min-width: 200px;
+  border: 1px var(--dark) solid;
+  background-color: var(--light);
+  padding: 12px;
+  color: var(--textColor);
+  font-size: 80%;
+  z-index: 1;
+}
+
+/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+@media screen and (min-width: 768px) {
+  /* on tablets, set columns to only be 50% of the width and not grow */
+  .main-header {
+  
+  }
+}
+
+/* media query for larger screens */
+@media screen and (min-width: 992px) {
+  header {
+    width: 100%;
+  }
 
 }

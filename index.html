@@ -9,20 +9,22 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
-    <header>
+    <header class="main-header">
         <h1>Marjan Nazari</h1>
         <nav>
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">works</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Resume</a></li>
+                <li><a href="#About-Me">About Me</a></li>
+                <li><a href="#Works">Works</a></li>
+                <li><a href="#Contact-Me">Contact Me</a></li>
+                <li><a href="https://docs.google.com/document/d/1DHizEpJ5EIwIHUsxTMVO5m5iUJWh1IsQVYqb__TJ4Rw/edit?usp=sharing">Resume</a></li>
             </ul>
+            </a>
+</div>
         </nav>
     </header>
     <main>
         <section>
-            <article>
+            <article id="About-Me">
                 <h2>About Me</h2>
                 <img src="./assets/images/ME.png" class="mypic" alt="ME" />
                 <p>
@@ -31,29 +33,44 @@
             </article>
         </section>
         <section class="works">
-            <article class="box">
-                <h2>works</h2>
-                    <h3>UX/UI Design</h3>
-                        <a href="#"><img src="./assets/images/Bamboo.jpg"  class="workBox" alt="Bamboo"/></a>
-                        <a href="#"><img src="./assets/images/CoffeeHouse.jpeg" class="workBox" alt="CoffeeHouse"/></a>
-                    <h3>Photography</h3>
-                        <a href="#"><img src="./assets/images/photography.jpg" class="workBox" alt="Photography"/></a>
-                    <h3>Programming</h3>
-                        <a href="#"><img src="./assets/images/Coming soon.jpg" class="workBox" alt="Coming soon"/></a>
-                        <a href="#"><img src="./assets/images/Coming soon.jpg" class="workBox" alt="Coming soon"/></a>
+            <article id="Works" class="box">
+                <h2>Works</h2>
+                <h3>Programming</h3>
+                <section class="work-flex">
+                    <!-- <a href="#"><img src="./assets/images/ComingSoon.jpg" class="workBox" id= "Programming" alt="Coming soon"/></a> -->
+                    <a class="projectContainer"><div id="comingSoon"></div><div class="projectOverlay">Coming Soon</div></a>
+                    <a href="#"><figure src="./assets/images/ComingSoon.jpg" class="workBox" alt="Coming soon"></figure></a>
+                </section>
+                <h3>UX/UI Design</h3>
+                <section class="work-flex">
+                    <a href="#"><img src="./assets/images/Bamboo.jpg"  class="workBox" alt="Bamboo"/></a>
+                    <a href="#"><img src="./assets/images/CoffeeHouse.jpeg" class="workBox" alt="CoffeeHouse"/></a>
+                </section>    
+                <h3>Photography</h3>
+                <section class="work-flex">
+                    <a href="#"><img src="./assets/images/photography.jpg" class="workBox" alt="Photography"/></a>
+                </section>
+                   
             </article>
         </section>
     </main>
     
 
     <footer>
-        <section>
+    
+        <section id="Contact-Me">
         <h2>Contact Me</h2>
             <h3>feel free to reach out for collaborations or just a friendly hello🙂</h3>
-                <a href="#"><img src="./assets/images/Email.svg" class="icon" alt="Email"/></a>
-                <a href="#"><img src="./assets/images/LinkedIn.svg" class="icon" alt="LinkedIn"/></a>
-                <a href="#"><img src="./assets/images/GitHub.svg" class="icon" alt="Github"/></a>
-                 <a href="#"><img src="./assets/images/Behance.svg" class="icon" alt="Behance"/></a>
+        </section>
+        <section class="contact">
+                <a href="mailto:nazari.mrjn@gmail.com">
+                    <img src="./assets/images/Email.svg" data-descr="Email" class="icon" alt="Email"/></a>
+                <a href="https://www.linkedin.com/in/marjan-nazari-24a577167/">
+                    <img src="./assets/images/LinkedIn.svg" data-descr="LinkedIn" class="icon" alt="LinkedIn"/></a>
+                <a href="https://github.com/Marjan-MN">
+                    <img src="./assets/images/GitHub.svg" data-descr="GitHub" class="icon" alt="Github"/></a>
+                 <a href="https://www.behance.net/marjan">
+                    <img src="./assets/images/Behance.svg" data-descr="Behance" class="icon" alt="Behance"/></a>
         </section> 
     </footer>
 </body>
