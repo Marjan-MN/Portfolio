@@ -1,3 +1,4 @@
+/* Variable color */
 :root {
     --dark: hsl(248, 69%, 51%);
     --textColor:#1c1c1c;
@@ -5,9 +6,9 @@
     --overlay:hsl(248, 69%, 51%, 0.7)
 
   }
-
+/* Universal code */
 * {
-    margin: 15px 10px;
+    margin: 12px 5px;
     padding: 5px 10px;
     
   }
@@ -24,6 +25,7 @@
     margin: 0%;
   }
   
+  /* style of header */
   .main-header{
     margin: 0%;
     padding: 0%;
@@ -38,42 +40,45 @@
     display: flex;
     flex-wrap: wrap;
   }
-
+/* style of logo */
   #logo{
     width: 100px;
     height: auto;
   }
+  /* style of logo while hovering */
   #logo:hover{
     transform: scale(1.1);
   }
 
-  h1 {
+  /* h1 {
     font-size: 350%;
     color: var(--textColor);
-}
+} */
 
+/* title of each section */
 h2 {
     font-size: 200%;
     color: var(--textColor);
     display: inline;
 }
-
+/* title of each section under work section */
 h3{
   font-size: 150%;
   color: var(--textColor);
   margin-top: 100px;
 }
 
-
+/* navigation bar on header*/
 li{
     margin: 5px;
     padding: 15px;
 }
 
-
+/* navigation bar on header*/
 nav{
   display: flex;
 }
+/* navigation bar on header*/
 nav ul {
     display: flex;
     justify-content: flex-end;
@@ -82,7 +87,7 @@ nav ul {
     padding: 0px ;
     
   }
-  
+/* navigation bar on header*/  
   nav a {
     font-size: 100%;
     text-decoration: none;
@@ -92,12 +97,13 @@ nav ul {
     padding: 0px;
     line-height: normal;
   }
+  /* navigation bar on header while hovering*/
   nav a:hover {
     color: var(--dark);
     text-decoration: underline 2px;
-    line-height: 0.5px;
+    line-height: 0.3px;
   }
-
+  /* style of about me photo  */
   .mypic{
     float: right;
     display: inline;
@@ -105,6 +111,7 @@ nav ul {
     height: auto;
     margin-right: 50px;
   }
+  
   #About-Me{
     margin-top: 50px;
     margin-left: 50px;
@@ -279,7 +286,14 @@ a[data-descr]:hover {
 
 /* Cards are stacked on top of each other at 768px or smaller */
 @media screen and (max-width: 768px) {
-footer{
-  
-}
+  .main-header{
+    flex-direction: column;
+  }
+  .navbar{
+    flex-direction: column;
+    align-items: center;
+  }
+  footer{
+    margin: ;
+  }
 }
